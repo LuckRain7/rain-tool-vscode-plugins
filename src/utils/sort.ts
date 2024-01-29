@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 const REGEX_IMPORT = /^import\s.*;$/gm;
 
 export const RainSort = {
-    command: "rain-import-sort.sort",
+    command: "rain-tool.sort",
     fn: () => {
         try {
             let editor = vscode.window.activeTextEditor as vscode.TextEditor; //获取当前激活的编辑框的实例

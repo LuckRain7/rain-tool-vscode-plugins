@@ -2,7 +2,8 @@
     "name": "rain-tool",
     "displayName": "rain-tool",
     "description": "a tool plugin by rain",
-    "author": "luckrain7@foxmail.com",
+    "author": "Ra1n",
+    "publisher": "Ra1n",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.85.0"
@@ -34,18 +35,18 @@
     "contributes": {
         "commands": [
             {
-                "command": "rain-import-sort.helloWorld",
+                "command": "rain-tool.helloWorld",
                 "title": "Hello World"
             },
             {
-                "command": "rain-import-sort.sort",
+                "command": "rain-tool.sort",
                 "title": "rain sort"
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "command": "rain-import-sort.sort",
+                    "command": "rain-tool.sort",
                     "title": "rain sort"
                 }
             ]
