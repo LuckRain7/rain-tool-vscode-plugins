@@ -2,6 +2,7 @@
     "name": "rain-tool",
     "displayName": "rain-tool",
     "description": "a tool plugin by rain",
+    "author": "luckrain7@foxmail.com",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.85.0"
@@ -49,5 +50,9 @@
                 }
             ]
         }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LuckRain7/rain-tool-vscode-plugins"
     }
 }
