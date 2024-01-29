@@ -5,6 +5,7 @@
     "author": "Ra1n",
     "publisher": "Ra1n",
     "version": "0.0.1",
+    "icon": "icon.jpeg",
     "engines": {
         "vscode": "^1.85.0"
     },
