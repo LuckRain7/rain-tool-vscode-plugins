@@ -4,7 +4,7 @@
     "description": "a tool plugin by rain",
     "author": "Ra1n",
     "publisher": "Ra1n",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icon": "icon.jpeg",
     "engines": {
         "vscode": "^1.85.0"
