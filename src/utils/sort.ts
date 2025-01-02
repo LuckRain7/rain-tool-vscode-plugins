@@ -17,8 +17,8 @@ export const RainSort = {
                 let impLines: Array<string> = [];
                 let noImpLine: Array<string> = [];
                 lines.forEach((str) => {
-                    if (str.match(REGEX_IMPORT)) impLines.push(str);
-                    else noImpLine.push(str);
+                    if (str.match(REGEX_IMPORT)) {impLines.push(str);}
+                    else {noImpLine.push(str);}
                 });
                 impLines.sort((a, b) => a.length - b.length);
                 noImpLine.sort((a, b) => a.length - b.length);

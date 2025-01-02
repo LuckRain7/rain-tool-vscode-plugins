@@ -37,18 +37,32 @@
         "commands": [
             {
                 "command": "rain-tool.helloWorld",
-                "title": "Hello World"
+                "title": "rain: hello world"
             },
             {
                 "command": "rain-tool.sort",
-                "title": "rain sort"
+                "title": "rain: sort import"
+            },
+            {
+                "command": "rain-tool.addHeader",
+                "title": "rain: add file header"
+            }
+        ],
+        "submenus": [
+            {
+                "id": "rain_tools",
+                "label": "rain's tools"
             }
         ],
         "menus": {
             "editor/context": [
                 {
-                    "command": "rain-tool.sort",
-                    "title": "rain sort"
+                    "submenu": "rain_tools"
+                }
+            ],
+            "rain_tools": [
+                {
+                    "command": "rain-tool.sort"
                 }
             ]
         }
