@@ -34,18 +34,24 @@ const RainAddHeader = {
                 config.lastLine
             ].join('\n');
 
-            // 获取当前文件内容
-            const content = vscode.window.activeTextEditor?.document.getText();
-            // 将文件内容和文件头拼接
-            const newContent = header + '\n\n' + content;
-            // 将新内容写入文件
-            vscode.window.activeTextEditor?.edit(editBuilder => {
-                editBuilder.replace(new vscode.Range(0, 0, 0, 0), newContent);
-            });
-            // 帮用户保存文件
-            vscode.window.activeTextEditor?.document.save();
+            // 获取当前编辑器
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                throw new Error('[RAIN] ❌ No active text editor');
+            }
 
-            vscode.window.showInformationMessage('[RAIN] ✅ add header success!');
+            const edit = new vscode.WorkspaceEdit();
+            const firstLine = editor.document.lineAt(0);
+            edit.insert(editor.document.uri, firstLine.range.start, header + '\n');
+
+            vscode.workspace.applyEdit(edit).then(success => {
+                if (success) {
+                    // 帮用户保存文件
+                    vscode.window.activeTextEditor?.document.save();
+                } else {
+                    vscode.window.showInformationMessage('[RAIN] ❌ add header failed!');
+                }
+            });
         } catch (error) {
             vscode.window.showInformationMessage(`[RAIN] ❌ ${error}`);
         }

@@ -6,7 +6,11 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
-### [V0.0.3]
+### [v0.0.3]
 
 feat[add header]: 新增支持 python go html css scss less sass rust markdown
 feat[add header]: 新增文件识别兼容
+
+### [v0.0.4]
+
+fix[add header]: insert duplicate content
