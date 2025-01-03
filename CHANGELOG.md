@@ -6,6 +6,10 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+### [v0.0.5]
+
+feat: add [rain: reload window]
+
 ### [v0.0.4]
 
 fix[add header]: insert duplicate content

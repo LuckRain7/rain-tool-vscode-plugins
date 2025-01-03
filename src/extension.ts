@@ -11,6 +11,7 @@
 import * as vscode from 'vscode';
 import {RainSort} from './utils/sort';
 import RainAddHeader from './utils/AddHeader/index';
+import RainReload from './utils/Reload/index';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -31,10 +32,12 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(
         // Hello World
         disposable,
-        // 排序
+        // import 排序
         use(RainSort),
         // 添加文件头
-        use(RainAddHeader)
+        use(RainAddHeader),
+        // 重新加载
+        use(RainReload)
     );
 }
 

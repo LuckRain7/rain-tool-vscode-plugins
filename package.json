@@ -51,6 +51,10 @@
             {
                 "command": "rain-tool.addHeader",
                 "title": "rain: add file header"
+            },
+            {
+                "command": "rain-tool.reload",
+                "title": "rain: reload window"
             }
         ],
         "submenus": [

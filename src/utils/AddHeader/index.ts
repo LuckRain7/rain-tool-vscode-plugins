@@ -32,6 +32,7 @@ const RainAddHeader = {
                 throw new Error('[RAIN] ❌ Unsupported language');
             }
 
+            // 拼接字符串
             const config = CONST[languageId as keyof typeof CONST];
             const header = [
                 config.firstLine, //
