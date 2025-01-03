@@ -2,7 +2,11 @@
     "name": "rain-tool",
     "displayName": "rain-tool",
     "description": "a tool plugin by rain",
-    "author": "Ra1n",
+    "author": {
+        "name": "LuckRain7",
+        "email": "luckrain7@foxmail.com",
+        "url": "https://github.com/LuckRain7"
+    },
     "publisher": "Ra1n",
     "version": "0.0.2",
     "icon": "icon.jpeg",
@@ -67,8 +71,13 @@
             ]
         }
     },
+    "homepage": "https://github.com/LuckRain7/rain-tool-vscode-plugins",
     "repository": {
         "type": "git",
         "url": "https://github.com/LuckRain7/rain-tool-vscode-plugins"
+    },
+    "bugs": {
+        "url": "https://github.com/LuckRain7/rain-tool-vscode-plugins/issues",
+        "email": "luckrain7@foxmail.com"
     }
 }
