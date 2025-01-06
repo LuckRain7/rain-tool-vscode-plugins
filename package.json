@@ -42,19 +42,19 @@
         "commands": [
             {
                 "command": "rain-tool.helloWorld",
-                "title": "rain: hello world"
+                "title": "Rain: hello world"
             },
             {
                 "command": "rain-tool.sort",
-                "title": "rain: sort import"
+                "title": "Rain: import sort"
             },
             {
                 "command": "rain-tool.addHeader",
-                "title": "rain: add file header"
+                "title": "Rain: add file header"
             },
             {
                 "command": "rain-tool.reload",
-                "title": "rain: reload window"
+                "title": "Rain: reload window"
             }
         ],
         "submenus": [
@@ -66,12 +66,10 @@
         "menus": {
             "editor/context": [
                 {
-                    "submenu": "rain_tools"
-                }
-            ],
-            "rain_tools": [
-                {
-                    "command": "rain-tool.sort"
+                    "when": "",
+                    "command": "rain-tool.sort",
+                    "alt": "hello world",
+                    "group": "RainGroup@1"
                 }
             ]
         }

@@ -6,6 +6,8 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+Refactor: 修改为更简介的右键菜单 + 修改大小写
+
 ### [v0.0.5]
 
 feat: add [rain: reload window]
