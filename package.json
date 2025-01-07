@@ -28,15 +28,15 @@
         "build": "vsce package"
     },
     "devDependencies": {
-        "@types/vscode": "^1.85.0",
         "@types/mocha": "^10.0.6",
         "@types/node": "18.x",
+        "@types/vscode": "^1.85.0",
         "@typescript-eslint/eslint-plugin": "^6.15.0",
         "@typescript-eslint/parser": "^6.15.0",
-        "eslint": "^8.56.0",
-        "typescript": "^5.3.3",
         "@vscode/test-cli": "^0.0.4",
-        "@vscode/test-electron": "^2.3.8"
+        "@vscode/test-electron": "^2.3.8",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
     },
     "contributes": {
         "commands": [
@@ -55,6 +55,10 @@
             {
                 "command": "rain-tool.reload",
                 "title": "Rain: reload window"
+            },
+            {
+                "command": "rain-tool.compressFolderImgs",
+                "title": "Rain: Compress the pictures in the folder"
             }
         ],
         "submenus": [
@@ -71,7 +75,24 @@
                     "alt": "hello world",
                     "group": "RainGroup@1"
                 }
+            ],
+            "explorer/context": [
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "rain-tool.compressFolderImgs",
+                    "group": "RainGroup@2"
+                }
             ]
+        },
+        "configuration": {
+            "title": "RainTool",
+            "properties": {
+                "raintool.compressQuality": {
+                    "type": "string",
+                    "default": "80",
+                    "description": "压缩质量"
+                }
+            }
         }
     },
     "homepage": "https://github.com/LuckRain7/rain-tool-vscode-plugins",
@@ -82,5 +103,9 @@
     "bugs": {
         "url": "https://github.com/LuckRain7/rain-tool-vscode-plugins/issues",
         "email": "luckrain7@foxmail.com"
+    },
+    "dependencies": {
+        "sharp": "^0.33.5",
+        "tinify": "^1.7.1"
     }
 }

@@ -1,43 +1,40 @@
-/*
- * @Author: luckrain7 luckrain7@foxmail.com
- * @Date: 2024-01-23 11:20:29
- * @LastEditors: luckrain7 luckrain7@foxmail.com
- * @LastEditTime: 2024-01-29 17:37:58
- * @FilePath: /rain-tool/src/extension.ts
- * @Description:
+/**
+ * Love and Peace
+ * Description: Hello World
+ * Note:
  */
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import {RainSort} from './utils/sort';
-import RainAddHeader from './utils/AddHeader/index';
 import RainReload from './utils/Reload/index';
+import RainAddHeader from './utils/AddHeader/index';
+import CompressFolderImgs from './utils/CompressFolderImgs/index';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-    // Use the console to output diagnostic information (console.log) and errors (console.error)
-    // This line of code will only be executed once when your extension is activated
     console.log('Congratulations, your extension "rain-tool" is now active!');
 
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with registerCommand
-    // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('rain-tool.helloWorld', () => {
-        // The code you place here will be executed every time your command is executed
-        // Display a message box to the user
+    const tinyFolderImgs = new CompressFolderImgs(context);
+
+    let helloWorld = vscode.commands.registerCommand('rain-tool.helloWorld', () => {
         vscode.window.showInformationMessage('Hello World from rain-tool!');
+    });
+
+    let compressFolderImgs = vscode.commands.registerCommand('rain-tool.compressFolderImgs', folder => {
+        if (folder && folder.fsPath) {
+            tinyFolderImgs.compressFolder(folder.fsPath);
+        }
     });
 
     context.subscriptions.push(
         // Hello World
-        disposable,
+        helloWorld,
         // import 排序
         use(RainSort),
         // 添加文件头
         use(RainAddHeader),
         // 重新加载
-        use(RainReload)
+        use(RainReload),
+        // 压缩文件夹中的图片
+        compressFolderImgs
     );
 }
 

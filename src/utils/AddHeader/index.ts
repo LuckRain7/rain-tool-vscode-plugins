@@ -14,7 +14,7 @@ const RainAddHeader = {
             // 获取当前编辑器
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                throw new Error('[RAIN] ❌ No active text editor');
+                throw new Error('[RAINTOOL] ❌ No active text editor');
             }
 
             // 获取文件类型
@@ -29,7 +29,7 @@ const RainAddHeader = {
 
             // 给出错误提示
             if (!languageId || !(languageId in CONST)) {
-                throw new Error('[RAIN] ❌ Unsupported language');
+                throw new Error('[RAINTOOL] ❌ Unsupported language');
             }
 
             // 拼接字符串
@@ -50,11 +50,11 @@ const RainAddHeader = {
                 if (success) {
                     editor.document.save(); // 帮用户保存文件
                 } else {
-                    vscode.window.showInformationMessage('[RAIN] ❌ add header failed!');
+                    vscode.window.showInformationMessage('[RAINTOOL] ❌ add header failed!');
                 }
             });
         } catch (error) {
-            vscode.window.showInformationMessage(`[RAIN] ❌ ${error}`);
+            vscode.window.showInformationMessage(`[RAINTOOL] ❌ ${error}`);
         }
     }
 };

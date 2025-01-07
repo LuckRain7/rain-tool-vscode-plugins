@@ -37,10 +37,10 @@ export const RainSort = {
                     // 替换文件中的代码
                     editBuilder.replace(editor.selection, newText);
                 });
-                vscode.window.showInformationMessage('[RAIN] ✅ sort success!');
+                vscode.window.showInformationMessage('[RAINTOOL] ✅ sort success!');
             }
         } catch (error) {
-            vscode.window.showInformationMessage(`[RAIN] ❌ ${error}`);
+            vscode.window.showInformationMessage(`[RAINTOOL] ❌ ${error}`);
         }
     }
 };
