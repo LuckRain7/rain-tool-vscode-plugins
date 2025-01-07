@@ -6,6 +6,7 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+docs: update
 feat: 增加右键压缩文件夹中的图片功能
 Refactor: 修改为更简介的右键菜单 + 修改大小写
 

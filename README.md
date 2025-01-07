@@ -14,4 +14,8 @@
 
 ## 3. Rain: Compress the pictures in the folder（文件系统右键菜单）
 
-> 利用 sharp 压缩文件夹中的文件，默认压缩质量 `quality: 80`
+> 利用 sharp 压缩文件夹中的图片
+
+目前支持： `['.jpg', '.jpeg', '.png', '.webp']`
+
+压缩质量默认 `quality: 80`
