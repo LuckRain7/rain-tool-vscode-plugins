@@ -104,7 +104,5 @@
         "url": "https://github.com/LuckRain7/rain-tool-vscode-plugins/issues",
         "email": "luckrain7@foxmail.com"
     },
-    "dependencies": {
-        "sharp": "^0.33.5"
-    }
+    "dependencies": {}
 }
