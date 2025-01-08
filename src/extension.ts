@@ -1,28 +1,23 @@
-/**
- * Love and Peace
- * Description: Hello World
- * Note:
- */
 import * as vscode from 'vscode';
 import {RainSort} from './utils/sort';
 import RainReload from './utils/Reload/index';
 import RainAddHeader from './utils/AddHeader/index';
-import CompressFolderImgs from './utils/CompressFolderImgs/index';
+// import CompressFolderImgs from './utils/CompressFolderImgs/index';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Congratulations, your extension "rain-tool" is now active!');
 
-    const tinyFolderImgs = new CompressFolderImgs(context);
+    // const tinyFolderImgs = new CompressFolderImgs(context);
 
     let helloWorld = vscode.commands.registerCommand('rain-tool.helloWorld', () => {
         vscode.window.showInformationMessage('Hello World from rain-tool!');
     });
 
-    let compressFolderImgs = vscode.commands.registerCommand('rain-tool.compressFolderImgs', folder => {
-        if (folder && folder.fsPath) {
-            tinyFolderImgs.compressFolder(folder.fsPath);
-        }
-    });
+    // let compressFolderImgs = vscode.commands.registerCommand('rain-tool.compressFolderImgs', folder => {
+    //     if (folder && folder.fsPath) {
+    //         tinyFolderImgs.compressFolder(folder.fsPath);
+    //     }
+    // });
 
     context.subscriptions.push(
         // Hello World
@@ -32,9 +27,9 @@ export function activate(context: vscode.ExtensionContext) {
         // 添加文件头
         use(RainAddHeader),
         // 重新加载
-        use(RainReload),
+        use(RainReload)
         // 压缩文件夹中的图片
-        compressFolderImgs
+        // compressFolderImgs
     );
 }
 

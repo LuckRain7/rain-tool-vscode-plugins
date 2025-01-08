@@ -6,6 +6,10 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+### [v0.0.7]
+
+fix: 删除 compressFolderImgs 功能
+
 ### [v0.0.6]
 
 docs: update
