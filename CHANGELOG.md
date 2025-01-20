@@ -6,6 +6,10 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+### [v0.0.8]
+
+feat: 增加代码注释模板功能
+
 ### [v0.0.7]
 
 fix: 删除 compressFolderImgs 功能

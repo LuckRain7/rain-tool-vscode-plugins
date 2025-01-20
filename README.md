@@ -11,3 +11,9 @@
 ## 2. Rain: reload window (cmd + Shift + P)
 
 > 重启 vscode 的 window，解决文件保存时的卡死问题
+
+## 3. Rain: Add code Comment Template (cmd + Shift + P)
+
+> 添加代码注释模板
+
+目前支持 vue javascript typescript python bash go rust
