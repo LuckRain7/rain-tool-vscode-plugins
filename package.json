@@ -59,6 +59,10 @@
             {
                 "command": "rain-tool.compressFolderImgs",
                 "title": "Rain: Compress the pictures in the folder"
+            },
+            {
+                "command": "rain-tool.addCodeComment",
+                "title": "Rain: Add code Comment Template"
             }
         ],
         "submenus": [
