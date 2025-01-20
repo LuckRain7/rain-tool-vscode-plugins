@@ -1,56 +1,52 @@
 export default {
-    vue: joinLines([
+    vue: [
         '/**', //
         ' * @description ',
         ' * @param {any} params - ',
         ' * @returns {void}',
         ' */'
-    ]),
-    javascript: joinLines([
+    ],
+    javascript: [
         '/**', //
         ' * @description ',
         ' * @param {any} params - ',
         ' * @returns {void}',
         ' */'
-    ]),
-    typescript: joinLines([
+    ],
+    typescript: [
         '/**', //
         ' * @description ',
         ' * @param {any} params - ',
         ' * @returns {void}',
         ' */'
-    ]),
-    python: joinLines([
+    ],
+    python: [
         '"""', //
         ' * @description ',
         ' * @param params: Any',
         ' * @return: None',
         '"""'
-    ]),
-    bash: joinLines([
+    ],
+    bash: [
         '##', //
         '# @description ',
         '# @param $1 - ',
         '# @return void',
         '##'
-    ]),
-    go: joinLines([
+    ],
+    go: [
         '/**', //
         ' * @description ',
         ' * @param params interface{} - ',
         ' * @return void',
         ' */'
-    ]),
-    rust: joinLines([
+    ],
+    rust: [
         '/**', //
         ' * @description ',
         ' * @param params: Any - ',
         ' * @return void',
         ' */'
-    ])
+    ]
     // need to check
 };
-
-function joinLines(lines: string[]): string {
-    return lines.join('\n') + '\n';
-}

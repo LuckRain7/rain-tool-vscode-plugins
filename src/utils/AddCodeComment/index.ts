@@ -25,9 +25,12 @@ export default {
                 throw new Error('[RAINTOOL] ❌ Unsupported language');
             }
 
-            const template = generateTemplate(languageId);
-
             const activeLine = editor.selection.active.line;
+            // 获取当前行的缩进
+            const currentLine = editor.document.lineAt(activeLine);
+            const currentText = currentLine.text;
+            const indentation = currentText.match(/^\s*/)?.[0] || '';
+            const template = generateTemplate(languageId, indentation);
 
             editor
                 .edit(editBuilder => {
@@ -36,7 +39,7 @@ export default {
                 })
                 .then(() => {
                     // 插入注释后，将光标定位到 @description 后
-                    const newPosition = new vscode.Position(activeLine + 1, 17);
+                    const newPosition = new vscode.Position(activeLine + 1, indentation.length + 17);
                     editor.selection = new vscode.Selection(newPosition, newPosition);
                 });
         } catch (error) {
@@ -46,7 +49,8 @@ export default {
     }
 };
 
-function generateTemplate(languageId: string): string {
+function generateTemplate(languageId: string, indentation: string): string {
     const template = CONST[languageId as keyof typeof CONST];
-    return template;
+    const result = template.map(line => indentation + line);
+    return result.join('\n') + '\n';
 }

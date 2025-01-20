@@ -6,6 +6,8 @@
 
 [配置文档](https://github.com/LuckRain7/rain-tool-vscode-plugins/wiki/config)
 
+feat: 增加缩进识别(addCodeComment) 
+
 ### [v0.0.8]
 
 feat: 增加代码注释模板功能
