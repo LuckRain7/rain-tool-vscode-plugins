@@ -17,3 +17,6 @@
 > 添加代码注释模板
 
 目前支持 vue javascript typescript python bash go rust
+
+* [x] 增加缩进识别
+* [ ] 增加变量识别

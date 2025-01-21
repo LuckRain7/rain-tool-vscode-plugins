@@ -1,0 +1,74 @@
+{
+    "rain-test": {
+        "prefix": "raintest",
+        "body": "$BLOCK_COMMENT_START Hello World $BLOCK_COMMENT_END",
+        "description": "rain's first test snippet"
+    },
+    "vue-template": {
+        "prefix": "rainvue",
+        "body": [
+            "",
+            "<template>",
+            "    <div></div>",
+            "</template>",
+            "",
+            "<script>",
+            "",
+            "export default {",
+            "    components: {},",
+            "    props: {},",
+            "    mounted: fMounted,",
+            "    data: fData,",
+            "    methods: {},",
+            "};",
+            "",
+            "function fData (){return {};}",
+            "",
+            "function fMounted (){}",
+            "",
+            "</script>",
+            "",
+            "<style lang=\"scss\" scoped></style>"
+        ],
+        "description": "rain's vue template"
+    },
+    "vue-ts-template": {
+        "prefix": "rainvuets",
+        "body": [
+            "",
+            "<template>",
+            "    <div></div>",
+            "</template>",
+            "",
+            "<script lang=\"ts\">",
+            "import Vue from '@ncfe/nc.vue';",
+            "import {Component} from 'vue-property-decorator';",
+            "",
+            "@Component",
+            "export default class XXXXX extends Vue {",
+            "",
+            "};",
+            "",
+            "</script>",
+            "",
+            "<style lang=\"scss\" scoped></style>"
+        ],
+        "description": "rain's vue ts template"
+    },
+    "vue-setup-template": {
+        "prefix": "rainvuesetup",
+        "body": [
+            "",
+            "<template>",
+            "    <div></div>",
+            "</template>",
+            "",
+            "<script lang=\"ts\" setup>",
+            "",
+            "</script>",
+            "",
+            "<style lang=\"scss\" scoped></style>"
+        ],
+        "description": "rain's vue setup template"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "rain-test": {
+        "prefix": "rainhelloWorld",
+        "body": ["Hello World"],
+        "description": "rain's first test snippet"
+    },
+    "rain-log": {
+        "prefix": "rainlog",
+        "body": ["console.log(`🌧🌧🌧 [$1]`, $1);"],
+        "description": "rain's console.log()"
+    }
+}
