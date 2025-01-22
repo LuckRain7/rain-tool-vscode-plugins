@@ -9,6 +9,7 @@
 ### [v0.0.10]
 
 feat: add snippets configuration
+refactor: update snippet paths and clean up old
 
 ### [v0.0.9]
 
