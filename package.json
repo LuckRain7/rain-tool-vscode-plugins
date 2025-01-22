@@ -101,10 +101,10 @@
         "snippets": [
             {
                 "language": "vue",
-                "path": "./src/snippets/my-vue.json"
+                "path": "./snippets/my-vue.json"
             },
             {
-                "path": "./src/snippets/snippets.code-snippets"
+                "path": "./snippets/rain-tool.code-snippets"
             }
         ]
     },
