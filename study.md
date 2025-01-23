@@ -8,6 +8,7 @@
 
 1. `vsce package`
 2. `code --install-extension rain-tool-0.0.8.vsix` or `code-insiders --install-extension rain-tool-0.0.1.vsix`
+3. 测试后，没有问题即进入发布流程
 
 ###  2. 设置代码片断
 
@@ -32,3 +33,6 @@
     }
 ]
 ```
+### 3. 增加 GitHub Actions 自动化发布 release 功能
+
+参考：<https://github.com/LuckRain7/test-release-publish>
