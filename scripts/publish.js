@@ -23,7 +23,7 @@ console.log('✨ Successfully create version ' + newVersion);
 
 try {
     // 提交更改
-    execSync('git add package.json changelog/');
+    execSync('git add package.json CHANGELOG.md changelog/');
     execSync(`git commit -m "chore: bump version to ${newVersion}"`);
 
     // 创建新的 tag

@@ -38,10 +38,16 @@ function generateChangelog(version) {
     console.log(`✨ Changelog has been generated at: changelog/${filename}`);
 
     // 更新 CHANGELOG.md
+    const markdownContent = content
+        .split('\n')
+        .map((line, index) => {
+            return index >= 2 ? `- ${line}` : line;
+        })
+        .join('\n');
     const changelogContent = fs.readFileSync(CHANGELOG_MD, 'utf-8');
     const updatedChangelog = changelogContent.replace(
         /<!-- ADD -->\n\n/g, // ADD 标记
-        `<!-- ADD -->\n\n${content}\n\n`
+        `<!-- ADD -->\n\n${markdownContent}\n\n`
     );
     fs.writeFileSync(CHANGELOG_MD, updatedChangelog);
     console.log(`✨ CHANGELOG.md has been updated`);
