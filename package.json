@@ -25,7 +25,8 @@
         "pretest": "yarn run compile && yarn run lint",
         "lint": "eslint src --ext ts",
         "test": "vscode-test",
-        "build": "vsce package"
+        "build": "vsce package",
+        "pub": "node scripts/publish.js"
     },
     "devDependencies": {
         "@types/mocha": "^10.0.6",

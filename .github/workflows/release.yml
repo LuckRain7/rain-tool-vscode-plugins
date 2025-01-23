@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*" # 识别推送 v 开头的 tag 时触发
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Build
+        run: npx vsce package
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUBTOKEN }}
+          name: "Version ${{ steps.get_version.outputs.VERSION }} 🚀"
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          body_path: changelog/v${{ steps.get_version.outputs.VERSION }}.md
+          files: |
+            rain-tool-${{ steps.get_version.outputs.VERSION }}.vsix
